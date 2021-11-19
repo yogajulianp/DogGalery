@@ -60,6 +60,8 @@ const Dogs = () => {
         />
       </View> */}
 
+      
+
       <Text>Gallery Dogs</Text>
       <Text>Gambar</Text>
 
