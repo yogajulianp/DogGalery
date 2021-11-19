@@ -23,11 +23,9 @@ export default function Router() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="Dogs Gallery" component={MyDrawwer} />
                 <Stack.Screen name="Home" component={Dogs}/>
-                
-                <Stack.Screen name="My Journey" component={MainApp}/>
-                
+                <Stack.Screen name="Gallery" component={MyDrawwer} />
+                <Stack.Screen name="Dogs Gallery" component={MainApp}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -66,6 +64,6 @@ const MainApp =()=>(
 const MyDrawwer =()=>(
     <Drawwer.Navigator>
         <Drawwer.Screen name="Dogs Gallery" component={MainApp} options={{headerShown:false}}/>
-        <Drawwer.Screen name="List Jenis Anjing" component={JenisDog} options={{headerShown: false}}/>
+        <Drawwer.Screen name="Jenis Anjing" component={JenisDog} options={{headerShown: false}}/>
     </Drawwer.Navigator>
 );

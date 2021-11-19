@@ -16,7 +16,7 @@ import axios from "axios";
 const Dogs = () => {
   const [dogs, setDogs] = useState([]);
 
-  const API_URL = "https://dog.ceo/api/breed/hound/images/random/10"
+  const API_URL = "https://dog.ceo/api/breed/hound/images"
   const getDogs = async () => {
     try {
       let response = await axios.get(API_URL);
@@ -28,17 +28,7 @@ const Dogs = () => {
     }
   };
 
-  // const [items, setItems]=useState([]);
 
-  // const GetData=()=> {
-  //     axios.get('https://dog.ceo/api/breed/hound/images
-  //     ')
-  //     .then(res=>{
-  //         const data1=(res.data.data)
-  //         console.log('res: ', data1)
-  //         setItems(data1)
-  //     })
-  // }
 
   useEffect(() => {
     getDogs();
@@ -46,28 +36,17 @@ const Dogs = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}></View>
-
       <View style={styles.header}>
-        <Text>Home</Text>
+        <Text>Dogs Galery</Text>
       </View>
-      {/* <View style={styles.card}>
-        <Image
-          style={styles.feedImage}
-          source={{
-            uri: feed_image,
-          }}
-        />
-      </View> */}
 
-      
-
-      <Text>Gallery Dogs</Text>
-      <Text>Gambar</Text>
-
-      <FlatList
+     
+        <FlatList
         data={dogs}
-        keyExtractor={(item) => `key-${item.index}`}
+        
+        keyExtractor = {
+          (item, index) => index
+       }
         renderItem={({ item }) => {
             return (
                 <View style={styles.card}>

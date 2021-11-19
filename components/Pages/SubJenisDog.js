@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function SubJenisDog() {
     return (
         <View style={styles.container}>
-            <Text>SubDog</Text>
+            <Text>Sub Jenis Dog</Text>
         </View>
     )
 }
